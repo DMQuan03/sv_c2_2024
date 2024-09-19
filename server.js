@@ -81,6 +81,7 @@ io.on("connection", (socket) => {
       await USER.findOneAndUpdate({ ip_address: data.data[5] }, { $set: { ip_socket: check_user._id.toString() } }, { new: true })
     } else {
       socket.join(socket.id)
+      console.log(data.data);
       const newUser = await new USER({
         ip_address: data.data[5],
         system: data.data[0],

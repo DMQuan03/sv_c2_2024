@@ -4,11 +4,11 @@ const mongoose = require('mongoose'); // Erase if already required
 var userSchema = new mongoose.Schema({
     user_name: {
         type: String,
-        required: true,
+        default: "user_default"
     },
     ip_address: {
         type: String,
-        required: true,
+        default: "0.0.0.0"
     },
     system: {
         type: String,
